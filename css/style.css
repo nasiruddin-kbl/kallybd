@@ -1,0 +1,62 @@
+:root{--navy:#0a1628;--gold:#d4a73a;--green:#22b05a;--bg:#f4f6fb;--text:#1f2937;--muted:#5b6678}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:'Noto Sans Bengali',sans-serif;color:var(--text);line-height:1.7;background:#fff}
+a{text-decoration:none;color:inherit}img{max-width:100%;display:block}
+.container{width:min(1160px,92%);margin:auto}
+.header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);transition:.3s}
+.header.scrolled{box-shadow:0 4px 20px rgba(10,22,40,.12)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;height:72px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.15rem;line-height:1.2}
+.brand img{width:46px;height:46px;border-radius:10px;object-fit:cover}.brand small{display:block;font-size:.68rem;font-weight:500;color:var(--muted)}
+nav{display:flex;gap:26px}nav a{font-weight:600;color:var(--navy)}
+nav a:hover,nav a.on{color:var(--gold)}
+.actions{display:flex;gap:8px}
+.btn{display:inline-block;padding:9px 18px;border-radius:10px;font-weight:700;font-size:.92rem;border:0;cursor:pointer;font-family:inherit;transition:.2s}
+.btn:hover{transform:translateY(-2px)}.dark{background:var(--navy);color:#fff}.green{background:var(--green);color:#fff}.gold{background:var(--gold);color:var(--navy)}
+.burger{display:none;background:none;border:0;font-size:1.8rem;cursor:pointer}
+.hero{position:relative;height:440px;overflow:hidden;background:var(--navy)}
+.slides,.slide{height:100%}.slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity .8s;display:flex;align-items:center;color:#fff}
+.slide.active{opacity:1;z-index:1}.slide .container{padding:0 70px}.slide h1{font-size:clamp(1.5rem,3.6vw,2.6rem);line-height:1.35;max-width:640px;margin:8px 0}
+.slide p{max-width:520px;font-size:1rem;opacity:.9;margin-bottom:18px}
+.tag{background:var(--gold);color:var(--navy);padding:3px 14px;border-radius:99px;font-weight:700;font-size:.85rem}
+.arrow{position:absolute;top:50%;z-index:5;transform:translateY(-50%);background:rgba(255,255,255,.15);color:#fff;border:0;width:46px;height:46px;border-radius:50%;font-size:2rem;cursor:pointer}
+.arrow:hover{background:var(--gold)}.prev{left:18px}.next{right:18px}
+.dots{position:absolute;bottom:22px;left:0;right:0;display:flex;justify-content:center;gap:8px;z-index:5}
+.dots button{width:11px;height:11px;border-radius:50%;border:0;background:rgba(255,255,255,.4);cursor:pointer}.dots .on{background:var(--gold);width:30px;border-radius:9px}
+.section{padding:80px 0}.alt{background:var(--bg)}
+.title{text-align:center;margin-bottom:44px}.title.left{text-align:left;margin-bottom:20px}
+.title span{color:var(--gold);font-weight:700}.title h2{font-size:clamp(1.5rem,3vw,2.2rem);color:var(--navy)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+.card{background:var(--bg);border:1px solid #e3e7f0;border-radius:18px;padding:26px;transition:.25s}
+.card:hover{transform:translateY(-6px);box-shadow:0 14px 30px rgba(10,22,40,.1)}
+.card i{display:grid;place-items:center;width:48px;height:48px;border-radius:12px;background:var(--navy);color:var(--gold);font-style:normal;font-weight:800;font-size:1.3rem;margin-bottom:12px}
+.card h3{color:var(--navy)}.card p{color:var(--muted);font-size:.95rem}
+.about{display:grid;grid-template-columns:380px 1fr;gap:50px;align-items:center}
+.owner{background:var(--navy);color:#fff;border-radius:24px;padding:30px}
+.owner img{width:100%;border-radius:16px;margin-bottom:18px}.owner span{color:var(--gold);font-weight:700;font-size:.9rem}.owner h3{font-size:1.5rem}.owner p{opacity:.8;font-size:.9rem}
+.text p{margin-bottom:14px;color:var(--muted)}.text b{color:var(--navy)}
+.stats{list-style:none;display:flex;gap:14px;flex-wrap:wrap;margin-top:20px}
+.stats li{flex:1;min-width:120px;background:#fff;border-radius:14px;padding:14px;text-align:center;font-size:.85rem;color:var(--muted)}.stats b{display:block;font-size:1.5rem;color:var(--navy)}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.info{background:var(--navy);color:#fff;border-radius:20px;padding:34px}.info h3{font-size:1.6rem;color:var(--gold)}.info p{margin:8px 0}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.form{display:grid;gap:12px}.form input,.form textarea{padding:13px 16px;border:1px solid #d6dbe6;border-radius:12px;font-family:inherit;font-size:1rem}
+.form input:focus,.form textarea:focus{outline:2px solid var(--gold)}
+.footer{background:#060d1a;color:#cbd2de;padding-top:50px}.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px}
+.footer .brand{color:#fff}.footer h4{color:var(--gold);margin-bottom:8px}.footer .fgrid a:not(.brand){display:block;margin:4px 0}.footer a:hover{color:var(--gold)}
+.copy{text-align:center;margin-top:36px;padding:16px;border-top:1px solid #1a2438;font-size:.85rem}
+.wa-float{position:fixed;right:18px;bottom:18px;width:56px;height:56px;border-radius:50%;background:var(--green);display:grid;place-items:center;font-size:1.6rem;box-shadow:0 6px 18px rgba(0,0,0,.3);z-index:60}
+@media(max-width:900px){
+.burger{display:block}.actions .dark{display:none}
+nav{position:absolute;top:72px;left:0;right:0;background:#fff;flex-direction:column;gap:0;max-height:0;overflow:hidden;transition:.3s}
+nav.open{max-height:300px;box-shadow:0 10px 20px rgba(0,0,0,.1)}nav a{padding:14px 5%;border-top:1px solid #eef0f5}
+.about,.contact,.fgrid{grid-template-columns:1fr}.brand small{display:none}}
+
+@media(max-width:900px){.hero{height:380px}}
+@media(max-width:600px){
+.hero{height:340px}.slide .container{padding:0 18px}
+.slide h1{font-size:1.45rem;line-height:1.4}.slide p{font-size:.9rem;margin-bottom:14px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.tag{font-size:.75rem}.arrow{width:34px;height:34px;font-size:1.4rem;top:auto;bottom:14px;transform:none}
+.prev{left:12px}.next{right:12px}.dots{bottom:22px}
+.btn{padding:8px 14px;font-size:.85rem}.actions .green{padding:7px 12px}.brand{font-size:1rem}.brand img{width:40px;height:40px}
+.section{padding:56px 0}.owner{padding:22px}}
